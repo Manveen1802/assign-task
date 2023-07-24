@@ -1,0 +1,26 @@
+<div class="container">
+
+    <form #f="ngForm">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                    <h3>Login</h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" pInputText placeholder="Enter your email" name="username"
+                            pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+                    </div>
+                    <div class="col-12">
+                        <input type="password" pInputText placeholder="Password" name="password">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+
+</div>
