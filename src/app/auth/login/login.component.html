@@ -1,26 +1,48 @@
-<div class="container">
+<div class="main-content">
+    <div>
+        <img class="w-100 login-bg" src="../../../assets/backgroung/login-bg.jpg" alt="">
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-12 col-12">
+            <div class="container login-card ">
 
-    <form #f="ngForm">
-        <div class="card">
-            <div class="card-header">
-                <div class="d-flex align-items-center justify-content-center flex-column">
-                    <h3>Login</h3>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-12">
-                        <input type="text" pInputText placeholder="Enter your email" name="username"
-                            pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+                <form #f="ngForm">
+                    <div class="card card-bg">
+                        <div class="card-header">
+                            <div class="d-flex align-items-center justify-content-center flex-column">
+                                <h3>Login</h3>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label >Username</label>
+                                    <input type="text" pInputText placeholder="Enter your email" name="username"
+                                        pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+                                </div>
+                                <div class="col-12">
+                                    <label> Password</label>
+                                    <input type="password" pInputText placeholder="Password" name="password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="d-flex align-items-center justify-content-center pb-2">
+                                <p-button label="Login" (click)="login()"></p-button>
+                            </div>
+                            <div>
+                                <p (click)="goToForgot() " class="cursor-pointer  text-center">Forgot Password?</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12">
-                        <input type="password" pInputText placeholder="Password" name="password">
-                    </div>
-                </div>
-            </div>
+            
+            
+                </form>
+           
+          
+        
         </div>
-
-
-    </form>
-
+        </div>
+    </div>
+ 
 </div>

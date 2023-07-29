@@ -6,18 +6,26 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { CommonModule } from '@angular/common';
 
  export const AuthRoutes: Routes = [{
+ 
   path: '',
-  redirectTo: 'login',
-  pathMatch: 'full'
-}, {
-  path: 'login',
-  component: LoginComponent
-}
-// {
-//   path: 'f',
-//   component: SignupComponent
-// },
- ]
+  children: [{
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  }, {
+    path: 'login',
+    component: LoginComponent
+  },
+
+  {
+    path: 'forget-password',
+    component: ForgotPasswordComponent
+  },
+  {
+    path: 'create-password',
+    component: ChangePasswordComponent
+  }]
+}]
 
 
 @NgModule({
