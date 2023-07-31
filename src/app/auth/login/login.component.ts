@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
     this.route.navigate(['admin/dashboard'])
   }
   goToForgot() {
-this.route.navigate(['auth/forgot-password'])
+    // this.route.navigate(['/auth/forgot-password'])
+    this.route.navigateByUrl("/auth/forgot-password")
   }
 
 }

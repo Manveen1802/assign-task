@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
   },
 
   {
-    path: 'forget-password',
+    path: 'forgot-password',
     component: ForgotPasswordComponent
   },
   {

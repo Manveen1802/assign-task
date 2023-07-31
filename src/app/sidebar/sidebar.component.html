@@ -1,0 +1,92 @@
+<div class="logo">
+    <a class="simple-text ">
+      <div class="d-flex justify-content-center logo-wrapper my-3">
+        <img class="naavalogo" src="../../assets/img/rent-pi/rent-pi-logo.svg" />
+  
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="sidebar-wrapper">
+  
+    <div class="user ">
+      <div class="photo mt-0">
+        <img src="./assets/img/faces/profile.png" />
+  
+      </div>
+      <div class="d-flex">
+        <div class="info flex-grow-1">
+          <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+            <span class="mb-1">
+              <b>{{this.personName}}</b>
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+            <span><label for=""></label>
+              {{this.role | titlecase}}
+            </span>
+          </a>
+          <div class="clearfix"></div>
+          <div class="collapse" id="collapseExample">
+            <ul class="nav">
+             <li><a (click)="navigateToRegistered()"><span>Registration</span></a></li>
+              <li>
+                <a (click)="logout()">
+                  <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <span class="sidebar-normal">Log Out</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <ul class="nav">
+      <li routerLinkActive="active" *ngFor="let menuitem of menuItems">
+        <!--If is a single link-->
+        <a [routerLink]="[menuitem.path]" *ngIf="menuitem.type === 'link'"
+          [ngClass]="{'d-flex':menuitem.iconPath && !menuitem.icontype}">
+          <i *ngIf="menuitem.icontype" class="{{menuitem.icontype}}"></i>
+          <img *ngIf="menuitem.iconPath && !menuitem.icontype" class="mr-2" src="{{menuitem.iconPath}}" />
+          <p>{{menuitem.title}}</p>
+        </a>
+        <!--If it have a submenu-->
+        <a data-toggle="collapse" href="#{{menuitem.collapse}}" *ngIf="menuitem.type === 'sub'" 
+          [ngClass]="{'d-flex':menuitem.iconPath && !menuitem.icontype}">
+          <i *ngIf="menuitem.icontype" class="{{menuitem.icontype}}"></i>
+          <img *ngIf="menuitem.iconPath && !menuitem.icontype" class="mr-3" src="{{menuitem.iconPath}}" />
+          <p>{{menuitem.title}}<b class="caret"></b></p>
+        </a>
+  
+        <div *ngIf="menuitem.type === 'link' && menuitem?.children?.length > 0">
+          <ul>
+            <li routerLinkActive="active" *ngFor="let childitem of menuitem.children">
+              <a [routerLink]="[childitem.path]">
+                <i class="{{childitem.icontype}}"></i>
+                <p>{{childitem.title}}</p>
+              </a>
+            </li>
+          </ul>
+  
+        </div>
+  
+  
+        <!--Display the submenu items-->
+        <div id="{{menuitem.collapse}}" class="collapse" *ngIf="menuitem.type === 'sub'">
+          <ul class="nav">
+            <li routerLinkActive="active" *ngFor="let childitem of menuitem.children">
+              <a [routerLink]="[childitem.path]">
+                <!-- <span class="sidebar-mini-icon">{{childitem.ab}}</span> -->
+                <i class="{{menuitem.icontype}}"></i>
+  
+                <span class="sidebar-normal">{{childitem.title}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  
+  </div>

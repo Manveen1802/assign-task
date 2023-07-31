@@ -9,7 +9,7 @@ import { ConfigurationComponent } from './configuration/configuration.component'
   children: [
     {
       path:'',
-      redirectTo:'auth/login',
+      redirectTo:'dashboard',
       pathMatch:'full'
     },
     {
