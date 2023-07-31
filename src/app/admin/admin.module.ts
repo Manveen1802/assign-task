@@ -5,6 +5,7 @@ import { AdminRoutingModule, adminRoutes } from './admin-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { RouterModule } from '@angular/router';
+import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     AdminRoutingModule,
     RouterModule.forChild(adminRoutes),
+    TableModule
 
   ],
   exports: [RouterModule]

@@ -1,1 +1,430 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "../src/assets/scss/paper-dashboard/variables";
+// @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+// @import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+/*Utilities*/
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.overflow-x-auto {
+    overflow-x: auto;
+}
+.input.internal-autofill-selected {
+    
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+/*Utilities*/
+
+/*Side bar*/
+.sidebar:after,
+.off-canvas-sidebar:after {
+    background: linear-gradient(176.48deg, #f2c7ff 0%, #f2c7ff 48.83%, #f2c7ff 100.5%);
+}
+
+.sidebar:after,
+.off-canvas-sidebar:after {
+    background-color: #1C67F6 !important;
+}
+
+.sidebar .nav i,
+.off-canvas-sidebar .nav i {
+    color: #ffffff;
+}
+
+.sidebar .user:after,
+.off-canvas-sidebar .user:after {
+    background-color: #FFFFFF;
+}
+
+.sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a .sidebar-mini-icon,
+.sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a .sidebar-mini-icon,
+.off-canvas-sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a .sidebar-mini-icon,
+.off-canvas-sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a .sidebar-mini-icon,
+.sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a span,
+.sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a span,
+.off-canvas-sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a span,
+.off-canvas-sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a span {
+    color: #ffffff;
+    font-weight: bold !important;
+}
+
+.sidebar[data-active-color="danger"] .nav li.active>a,
+.sidebar[data-active-color="danger"] .nav li.active>a i,
+.sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"],
+.sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"] i,
+.sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active .sidebar-mini-icon,
+.sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active>a,
+.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a,
+.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a i,
+.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"],
+.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"] i,
+.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active .sidebar-mini-icon,
+.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active>a {
+    color: #ffffff;
+    font-weight: bold !important;
+}
+
+.sidebar {
+    .logo-wrapper {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.sidebar-mini {
+    .sidebar {
+        .logo-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+}
+
+/*Side bar*/
+
+/*Data tables*/
+
+.dataTable,
+table {
+
+    th,
+    td {
+        font-size: 12px !important;
+    }
+
+    th {
+        white-space: nowrap;
+        min-width: 90px;
+    }
+}
+
+table.dataTable thead>tr>th.sorting_asc,
+table.dataTable thead>tr>th.sorting_desc,
+table.dataTable thead>tr>th.sorting,
+table.dataTable thead>tr>td.sorting_asc,
+table.dataTable thead>tr>td.sorting_desc,
+table.dataTable thead>tr>td.sorting {
+    padding-right: 8px;
+}
+
+.pagination .page-item .page-link,
+.pagination .paginate_button a {
+    text-transform: capitalize;
+}
+
+.pagination .page-item:not(.first):not(.last):not(.previous):not(.next):not(.active) .page-link,
+.pagination .paginate_button:not(.first):not(.last):not(.previous):not(.next):not(.active) a {
+    background: #e6dddd;
+
+    &:hover {
+        background: darken(#e6dddd, 20%);
+    }
+}
+
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+    padding: 8px;
+}
+
+.table>thead>tr>th {
+    padding: 16px !important;
+    color: #1C67F6;
+}
+
+.dataTables_scrollBody>.table>thead>tr>th {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.fa-chevron-down {
+    position: absolute;
+    top: 3px;
+    right: 18px;
+    transition: all 150ms ease 0s;
+    color: #ffffff;
+}
+
+a[data-toggle="collapse"][aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+    top: 1px !important;
+}
+
+.dataTables_wrapper input[type="search"] {
+    opacity: 0.7;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 40px;
+}
+
+.p-input-icon-left>i:first-of-type {
+    right: 10px !important;
+    left: unset !important;
+}
+
+.p-input-icon-left>.p-inputtext {
+    padding-left: 15px !important;
+}
+
+.dataTables_wrapper div.dataTables_length select {
+    margin-right: 0.25rem;
+}
+
+.table>tbody>tr>td {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+
+}
+
+.table-bordered,
+.table-bordered th,
+.table-bordered td {
+    border-left: 0;
+    border-right: 0;
+}
+
+/*Data tables*/
+
+/*Modal*/
+
+.modal-open .modal {
+    z-index: 1055;
+
+    .modal-header {
+        text-align: left;
+
+        .modal-title {
+            display: inline;
+        }
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        // padding: 1rem;
+    }
+}
+
+/*Modal*/
+
+/*Buttons*/
+.btn.btn-primary {
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: darken($primary-color, 20%) !important;
+    }
+}
+
+/*Buttons*/
+
+/*Form*/
+.control-label {
+    margin-bottom: 0.25rem;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/*Form*/
+
+/*Utilities*/
+.required-field:after {
+    color: red;
+    content: "*";
+    padding-left: 4px;
+}
+
+// .error-msg {
+//     position: absolute;  
+// }
+
+/*Utilities*/
+// .navbar {
+//     padding-top: 52px !important;
+// }
+
+.navbar.navbar-transparent {
+    border-bottom: none !important;
+}
+.modal-title{
+    text-transform: capitalize;
+}
+
+.navbar {
+    .back-btn {
+        cursor: pointer;
+        border-left: 1px solid #ccc;
+        margin-left: 0.25rem;
+
+        &>i {
+            font-size: 1.5rem;
+        }
+    }
+
+    .navbar-brand {
+        padding: 0;
+    }
+
+    .kmk-breadcrumbs {
+
+        a,
+        span {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.navbar.navbar-transparent a:not(.dropdown-item):not(.btn) {
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar.navbar-transparent .kmk-breadcrumbs a:not(.dropdown-item):not(.btn).link {
+    color: $primary-color !important;
+}
+
+/*PerfectScrollbar*/
+#scrollImages>div.ps__rail-y>div {
+    background-color: #ff3838 !important;
+}
+
+/*PerfectScrollbar*/
+
+/*Datepicker*/
+
+ngb-datepicker.dropdown-menu:before {
+    content: none;
+}
+
+.form-control[readonly][ngbdatepicker] {
+    background-color: transparent;
+}
+
+/*Datepicker*/
+
+/*selectpicker*/
+.bootstrap-select>.dropdown-toggle.btn-light,
+.bootstrap-select .filter-option-inner-inner {
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #fff !important;
+        color: #2c2c2c !important;
+        font-weight: 400 !important;
+    }
+
+    background-color: #fff !important;
+    color: #2c2c2c !important;
+    font-weight: 400 !important;
+    text-transform: capitalize !important;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'>    <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/> </svg>");
+    background-repeat: no-repeat;
+    background-position-x: 96%;
+    background-position-y: 12px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+}
+
+.dropdown.show .dropdown-menu[x-placement="bottom-start"] {
+    transform: translate(0px, 30px) !important;
+}
+
+.bootstrap-select.show .dropdown-menu.show[x-placement="top-start"] {
+    transform: translate(0px, -52px) !important;
+}
+
+.main-panel .main-content {
+    margin-top: 8px;
+}
+
+.navbar.navbar-transparent {
+    background-color: #f9f5f3 !important;
+}
+
+.img-cropper {
+    opacity: 0.5;
+}
+
+.modal-title {
+    font-weight: 500;
+}
+
+.search-btn .btn {
+    border-width: 2px;
+    font-weight: 600;
+    font-size: 0.8571em;
+    line-height: 1.35em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    margin-left: 0px !important;
+    padding: 11px 22px;
+    cursor: pointer;
+    margin-top: 0px !important;
+    background-color: #e63a27 !important;
+    color: #ffffff;
+    transition: all 150ms linear;
+}
+
+.p-inputtext:enabled:focus {
+    border-color: unset !important;
+    box-shadow: none !important;
+}
+
+.p-inputtext:enabled:hover {
+    border-color: unset !important;
+}
+#minimizeSidebar{
+    display: none !important;
+}
+.customPuploader .p-fileupload-choose{
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: space-between !important;
+}
+.customPuploader .p-fileupload-choose{
+    padding: 0.4rem 1.25rem !important;
+    border: 1px solid #dddddd !important;
+    border-radius: unset !important;
+    background-color: #FFFFFF !important;
+    width: 100% !important;
+}
+.customPuploader .p-fileupload-choose:not(.p-disabled):hover{
+    border: 1px solid #dddddd;
+}
+.customPuploader .pi-upload,.customPuploader .p-button-label{
+    color: #999999 !important;
+}
+@media all and (max-width: 480px) {
+    .navbar.navbar-transparent a:not(.dropdown-item):not(.btn) {
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+}
